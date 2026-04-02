@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/numb-edition-collective/",
+  base: process.env.GITHUB_PAGES === "true" ? "/numb-edition-collective/" : "/",
   server: {
     host: "::",
     port: 8080,
